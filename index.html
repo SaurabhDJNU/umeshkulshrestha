@@ -1,0 +1,939 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prof. Umesh Kulshrestha</title>
+<meta name="description" content="Prof. Umesh Chandra Kulshrestha, Professor and Dean, School of Environmental Sciences, Jawaharlal Nehru University. Atmospheric chemistry, aerosols, rain and snow chemistry, dust and reactive nitrogen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --indigo:#22306f;
+  --indigo-2:#2f3f8f;
+  --sky:#a9dbf7;
+  --sky-2:#d9f0fd;
+  --sun:#f7c548;
+  --mint:#bfe8d0;
+  --rose:#ffb8c6;
+  --paper:#fbfcff;
+  --ink:#141a33;
+  --ink-2:#4a5275;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;line-height:1.05;letter-spacing:-.02em}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 16px}
+@media(min-width:760px){.wrap{padding:0 32px}}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+.script{font-family:Caveat,cursive;font-weight:600}
+
+/* ---------- floating nav ---------- */
+.nav{position:fixed;top:14px;left:0;right:0;z-index:50;pointer-events:none}
+.nav-inner{pointer-events:auto;margin:0 auto;max-width:1100px;width:calc(100% - 24px);background:#fff;border-radius:999px;box-shadow:0 10px 30px rgba(34,48,111,.14);display:flex;align-items:center;justify-content:space-between;padding:8px 8px 8px 20px}
+.brand{font:800 1.05rem "Bricolage Grotesque",sans-serif;text-decoration:none;display:flex;align-items:center;gap:8px}
+.brand i{width:26px;height:26px;border-radius:50%;background:var(--sun);display:grid;place-items:center;font-style:normal;font-size:.8rem;color:var(--indigo)}
+.nav-links{display:flex;gap:2px}
+.nav-links a{text-decoration:none;font-weight:600;font-size:.92rem;padding:9px 14px;border-radius:999px;color:var(--ink-2)}
+.nav-links a:hover{background:var(--sky-2);color:var(--indigo)}
+.nav-cta{background:var(--indigo)!important;color:#fff!important}
+.burger{display:none;border:0;background:var(--indigo);color:#fff;width:42px;height:42px;border-radius:50%;font-size:1.1rem;cursor:pointer}
+@media(max-width:900px){
+  .burger{display:block}
+  .nav-links{position:absolute;top:66px;left:12px;right:12px;flex-direction:column;background:#fff;border-radius:24px;padding:10px;box-shadow:0 14px 40px rgba(34,48,111,.18);display:none}
+  .nav-links.open{display:flex}
+}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;background:var(--sky);padding:130px 0 120px;overflow:hidden}
+.hero-grid{display:grid;gap:40px;align-items:center;position:relative;z-index:2}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.15fr 1fr}}
+.hello{font-size:1.9rem;color:var(--indigo-2);transform:rotate(-3deg);display:inline-block;margin-bottom:4px}
+.hero h1{font-size:clamp(3rem,9vw,6.6rem);font-weight:800;color:var(--indigo);line-height:.92}
+.hero h1 span{display:block}
+.hero h1 .outline{color:transparent;-webkit-text-stroke:2.5px var(--indigo)}
+.hero .tagline{font-size:1.2rem;max-width:30ch;margin:22px 0 28px;color:var(--ink)}
+.hero .tagline b{background:linear-gradient(transparent 60%,var(--sun) 60%);font-weight:700}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:999px;border:2.5px solid var(--indigo);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.solid{background:var(--indigo);color:#fff}
+.btn.light{background:#fff;color:var(--indigo)}
+
+.art{position:relative;height:440px;max-width:460px;margin:0 auto;width:100%}
+@media(min-width:900px){.art{height:520px}}
+.sun{position:absolute;width:78%;aspect-ratio:1;border-radius:50%;background:var(--sun);right:0;top:4%}
+.photo{position:absolute;left:8%;top:12%;width:70%;height:78%;border-radius:48% 52% 44% 56%/56% 44% 56% 44%;overflow:hidden;border:8px solid #fff;box-shadow:0 20px 50px rgba(34,48,111,.25);background:var(--indigo);display:grid;place-items:center;color:#fff;font:800 4rem "Bricolage Grotesque",sans-serif}
+.photo img{width:100%;height:100%;object-fit:cover}
+.sticker{position:absolute;background:#fff;border-radius:20px;padding:12px 16px;box-shadow:0 12px 28px rgba(34,48,111,.18);font-weight:600;font-size:.9rem;line-height:1.25}
+.sticker b{display:block;font:800 1.7rem "Bricolage Grotesque",sans-serif;color:var(--indigo)}
+.s1{right:0;top:58%;transform:rotate(4deg)}
+.s2{left:-2%;bottom:0;transform:rotate(-5deg);background:var(--mint)}
+.s3{right:6%;top:0;transform:rotate(-6deg);background:var(--rose);border-radius:999px;padding:10px 18px}
+.cloud{position:absolute;fill:#fff;opacity:.9}
+.rain line{stroke:var(--indigo-2);stroke-width:2.5;stroke-linecap:round;opacity:.35}
+@media (prefers-reduced-motion:no-preference){
+  .rain line{animation:fall 2.4s linear infinite}
+  .rain line:nth-child(2n){animation-delay:-.8s}
+  .rain line:nth-child(3n){animation-delay:-1.6s}
+  @keyframes fall{from{transform:translateY(-40px);opacity:0}25%{opacity:.4}to{transform:translateY(60px);opacity:0}}
+}
+.wave{position:absolute;bottom:-1px;left:0;width:100%;height:80px;z-index:3}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--indigo);color:#fff;overflow:hidden;padding:16px 0;transform:rotate(-1.2deg);margin:-10px -20px 0;position:relative;z-index:4}
+.marquee-track{display:flex;gap:42px;white-space:nowrap;font:600 1.3rem "Bricolage Grotesque",sans-serif;width:max-content}
+.marquee-track span::after{content:"✺";color:var(--sun);margin-left:42px}
+@media (prefers-reduced-motion:no-preference){.marquee-track{animation:slide 40s linear infinite}@keyframes slide{to{transform:translateX(-50%)}}}
+
+/* ---------- sections ---------- */
+section{padding:96px 0;position:relative}
+.head{margin-bottom:44px;max-width:720px}
+.head h2{font-size:clamp(2.3rem,5.5vw,3.8rem);font-weight:800;color:var(--indigo)}
+.head p{font-size:1.1rem;color:var(--ink-2);margin:14px 0 0}
+.head .script{font-size:1.6rem;color:var(--indigo-2);display:block;margin-bottom:2px;transform:rotate(-2deg);transform-origin:left}
+
+/* about */
+.about-grid{display:grid;gap:40px}
+@media(min-width:900px){.about-grid{grid-template-columns:1.1fr .9fr;align-items:start}}
+.about-grid p{margin:0 0 16px;max-width:62ch}
+.quote-card{background:var(--sun);border-radius:32px;padding:34px 30px;position:relative;transform:rotate(1.5deg)}
+.quote-card p{font:600 1.45rem/1.3 "Bricolage Grotesque",sans-serif;color:var(--indigo);margin:0}
+.quote-card .script{display:block;margin-top:16px;font-size:1.4rem;color:var(--ink)}
+.quote-card::before{content:"“";position:absolute;top:-34px;left:22px;font:800 6rem/1 "Bricolage Grotesque",sans-serif;color:var(--indigo)}
+
+.journey{margin-top:64px}
+.journey h3{font-size:1.7rem;color:var(--indigo);margin-bottom:24px}
+.track{display:flex;gap:16px;overflow-x:auto;padding:6px 2px 18px;scroll-snap-type:x mandatory}
+.stop{flex:0 0 220px;scroll-snap-align:start;background:#fff;border:2.5px solid var(--indigo);border-radius:24px;padding:20px;position:relative}
+.stop:nth-child(odd){background:var(--sky-2)}
+.stop .y{font:800 1.5rem "Bricolage Grotesque",sans-serif;color:var(--indigo)}
+.stop .t{font-weight:700;margin:6px 0 2px}
+.stop .w{font-size:.9rem;color:var(--ink-2)}
+.stop:last-child{background:var(--sun)}
+
+/* research */
+.research{background:var(--indigo);color:#fff;border-radius:48px 48px 0 0}
+.research .head h2{color:#fff}
+.research .head p{color:#c9d2f5}
+.research .head .script{color:var(--sun)}
+.pills{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:56px}
+.pill{padding:10px 18px;border-radius:999px;font-weight:700;color:var(--indigo);font-size:.98rem}
+.pill:nth-child(4n+1){background:var(--sky);transform:rotate(-2deg)}
+.pill:nth-child(4n+2){background:var(--sun);transform:rotate(1.5deg)}
+.pill:nth-child(4n+3){background:var(--mint)}
+.pill:nth-child(4n){background:var(--rose);transform:rotate(-1deg)}
+
+.bento{display:grid;gap:18px}
+@media(min-width:760px){.bento{grid-template-columns:repeat(6,1fr)}
+  .b1{grid-column:span 4}.b2{grid-column:span 2}.b3{grid-column:span 2}
+  .b4{grid-column:span 4}.b5{grid-column:span 3}.b6{grid-column:span 3}}
+.tile{border-radius:28px;padding:28px;color:var(--ink);position:relative;overflow:hidden}
+.tile svg{width:52px;height:52px;margin-bottom:14px}
+.tile h3{font-size:1.45rem;color:var(--indigo);margin-bottom:8px}
+.tile p{margin:0;font-size:.98rem}
+.b1{background:var(--sky)}.b2{background:var(--sun)}.b3{background:var(--rose)}
+.b4{background:var(--mint)}.b5{background:#fff}.b6{background:var(--sky-2)}
+.b1 h3{font-size:2rem;max-width:18ch}
+.tile .first{position:absolute;right:20px;top:20px;background:var(--indigo);color:#fff;font-weight:700;font-size:.8rem;padding:6px 12px;border-radius:999px;transform:rotate(6deg)}
+
+.tools{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.tools .script{font-size:1.6rem;color:var(--sun)}
+.tool{border:2px dashed #8f9ad6;border-radius:18px;padding:12px 18px;font-weight:600}
+
+/* publications */
+.pubs-sec{background:var(--sun)}
+.pubs-sec .head h2{color:var(--indigo)}
+.tabs{display:inline-flex;gap:6px;background:#fff;padding:6px;border-radius:999px;margin-bottom:28px;flex-wrap:wrap}
+.tab{border:0;background:none;font:700 .95rem Figtree,sans-serif;padding:10px 20px;border-radius:999px;cursor:pointer;color:var(--ink-2)}
+.tab[aria-selected="true"]{background:var(--indigo);color:#fff}
+.plist{list-style:none;margin:0;padding:0;background:#fff;border-radius:32px;overflow:hidden;box-shadow:0 18px 40px rgba(34,48,111,.12)}
+.p{display:grid;grid-template-columns:72px 1fr;gap:18px;padding:22px 26px;border-bottom:2px solid var(--sky-2)}
+.p:last-child{border-bottom:0}
+.p .y{font:800 1.3rem "Bricolage Grotesque",sans-serif;color:var(--indigo);background:var(--sky-2);border-radius:14px;text-align:center;padding:8px 0;height:max-content}
+.p .ti{font-weight:700;font-size:1.05rem;line-height:1.35;margin-bottom:4px}
+.p .au{font-size:.92rem;color:var(--ink-2)}
+.p .au b{color:var(--indigo)}
+.p .ve{font-size:.92rem;font-style:italic;color:var(--ink-2)}
+.p .ve a{font-style:normal;color:var(--indigo-2);font-weight:600}
+@media(max-width:560px){.p{grid-template-columns:1fr;gap:8px}.p .y{width:72px}}
+[hidden]{display:none!important}
+.p{grid-template-columns:72px 1fr auto}
+.cites{font:800 1.4rem "Bricolage Grotesque",sans-serif;color:var(--indigo);text-align:right;line-height:1}
+.cites small{display:block;font:600 .75rem Figtree,sans-serif;color:var(--ink-2);margin-top:4px}
+.cites.new{font-size:.85rem;background:var(--mint);padding:6px 12px;border-radius:999px;height:max-content}
+@media(max-width:560px){.p{grid-template-columns:1fr}.cites{text-align:left}.cites small{display:inline;margin-left:6px}}
+.impact{display:grid;gap:22px;align-items:stretch}
+@media(min-width:900px){.impact{grid-template-columns:.9fr 1.1fr}}
+.impact .counts{margin-top:0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.impact .count{display:flex;flex-direction:column;justify-content:center;padding:20px 22px}
+.impact .count b{font-size:2.4rem}
+.impact .count.alt{background:#fff;color:var(--ink)}
+.impact .count.alt b{color:var(--indigo)}
+.chart-card{background:#fff;border-radius:28px;padding:24px 24px 18px}
+.chart-card h3{font-size:1.3rem;color:var(--indigo);margin-bottom:14px}
+.bars{display:flex;align-items:flex-end;gap:3px;height:170px}
+.bars i{flex:1;background:var(--indigo);border-radius:5px 5px 2px 2px;min-height:3px;position:relative}
+.bars i:nth-last-child(-n+6){background:var(--indigo-2)}
+.bars i:last-child{background:repeating-linear-gradient(45deg,var(--indigo-2) 0 4px,var(--sky) 4px 8px)}
+.bars i:hover::after{content:attr(data-t);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font:600 .75rem Figtree,sans-serif;padding:4px 8px;border-radius:8px;white-space:nowrap;z-index:2}
+.bar-axis{display:flex;justify-content:space-between;font-size:.8rem;color:var(--ink-2);margin-top:8px;font-weight:600}
+
+.counts{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.count{background:var(--indigo);color:#fff;border-radius:22px;padding:14px 22px}
+.count b{font:800 2rem "Bricolage Grotesque",sans-serif;display:block;line-height:1;color:var(--sun)}
+.count span{font-size:.9rem}
+.small{font-size:.85rem;color:var(--ink-2);margin-top:12px}
+
+/* projects */
+.proj-grid{display:grid;gap:22px}
+@media(min-width:860px){.proj-grid{grid-template-columns:1fr 1fr}}
+.proj{border-radius:32px;padding:32px;border:2.5px solid var(--indigo)}
+.proj.now{background:var(--mint)}
+.proj.then{background:#fff}
+.proj h3{font-size:1.6rem;color:var(--indigo);margin-bottom:16px}
+.proj ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.proj li{padding-left:28px;position:relative}
+.proj li::before{content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;border-radius:50% 50% 50% 0;background:var(--indigo);transform:rotate(-45deg)}
+.proj a{font-weight:700;color:var(--indigo-2)}
+
+/* honours */
+.honours{background:var(--sky-2)}
+.medals{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.medal{text-align:center}
+.disc{width:150px;height:150px;margin:0 auto 14px;border-radius:50%;display:grid;place-items:center;font:800 2.2rem "Bricolage Grotesque",sans-serif;color:var(--indigo);position:relative;border:6px dashed rgba(255,255,255,.9);outline:8px solid currentColor;outline-offset:-1px}
+.medal:nth-child(1) .disc{background:var(--sun)}
+.medal:nth-child(2) .disc{background:var(--rose)}
+.medal:nth-child(3) .disc{background:var(--mint)}
+.medal:nth-child(4) .disc{background:var(--sky)}
+.medal:nth-child(5) .disc{background:#fff}
+.medal .t{font-weight:700;font-size:1.05rem}
+.medal .d{font-size:.9rem;color:var(--ink-2)}
+.roles{display:grid;gap:22px;margin-top:64px}
+@media(min-width:860px){.roles{grid-template-columns:1fr 1fr}}
+.role-card{background:#fff;border-radius:32px;padding:30px}
+.role-card h3{font-size:1.5rem;color:var(--indigo);margin-bottom:14px}
+.role-card ul{margin:0;padding-left:20px}
+.role-card li{margin-bottom:8px}
+.role-card li::marker{color:var(--indigo-2)}
+
+/* group */
+.group-grid{display:grid;gap:40px}
+@media(min-width:900px){.group-grid{grid-template-columns:1.3fr .7fr}}
+.tags{display:flex;flex-wrap:wrap;gap:14px}
+.tag{background:#fff;border:2.5px solid var(--indigo);border-radius:16px;padding:12px 18px;font-weight:700;position:relative}
+.tag:nth-child(3n+1){transform:rotate(-2deg)}
+.tag:nth-child(3n+2){transform:rotate(1.5deg);background:var(--sky-2)}
+.tag::before{content:"";position:absolute;top:-8px;left:50%;width:34px;height:14px;background:var(--sun);opacity:.85;transform:translateX(-50%) rotate(-3deg)}
+.teach{background:var(--indigo);color:#fff;border-radius:32px;padding:30px}
+.teach h3{font-size:1.5rem;margin-bottom:16px}
+.course{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.course:last-child{border:0}
+.course span{color:var(--sun);font-weight:700;white-space:nowrap}
+.network{margin-top:28px;background:var(--mint);border-radius:28px;padding:24px 26px}
+.network h3{color:var(--indigo);font-size:1.35rem;margin-bottom:6px}
+.network p{margin:0}
+
+/* outreach */
+.outreach{background:var(--rose)}
+.collage{display:grid;gap:18px}
+@media(min-width:760px){.collage{grid-template-columns:repeat(3,1fr)}}
+.note{background:#fff;border-radius:26px;padding:26px;box-shadow:0 10px 0 var(--indigo)}
+.note:nth-child(2){transform:rotate(1.5deg);background:var(--sun)}
+.note:nth-child(4){transform:rotate(-1.5deg);background:var(--sky)}
+.note:nth-child(6){background:var(--mint)}
+.note h3{font-size:1.3rem;color:var(--indigo);margin-bottom:8px}
+.note p{margin:0;font-size:.97rem}
+
+/* contact */
+.contact{background:var(--indigo);color:#fff;border-radius:48px 48px 0 0;padding-bottom:60px}
+.contact h2{font-size:clamp(2.8rem,8vw,6rem);font-weight:800;line-height:.95;color:#fff}
+.contact h2 .outline{color:transparent;-webkit-text-stroke:2px var(--sun)}
+.contact-grid{display:grid;gap:40px;margin-top:20px}
+@media(min-width:900px){.contact-grid{grid-template-columns:1.2fr 1fr;align-items:end}}
+.mail{display:inline-block;margin-top:24px;font:700 clamp(1.1rem,2.6vw,1.6rem) "Bricolage Grotesque",sans-serif;color:var(--indigo);background:var(--sun);padding:14px 24px;border-radius:999px;text-decoration:none;word-break:break-all}
+.cinfo{display:grid;gap:14px}
+.cinfo div{background:rgba(255,255,255,.08);border-radius:22px;padding:18px 22px}
+.cinfo small{display:block;color:var(--sky);font-weight:600;margin-bottom:2px}
+.cinfo a{color:#fff;font-weight:600}
+footer{background:var(--indigo);color:#aab4e6;font-size:.88rem;padding:0 0 30px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;border-top:1px solid rgba(255,255,255,.12);padding-top:22px}
+footer a{color:#fff}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top"><i>UK</i>Kulshrestha Lab</a>
+    <nav class="nav-links" id="links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#honours">Honours</a>
+      <a href="#group">Group</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<div class="hero">
+  <svg class="cloud" style="width:180px;left:4%;top:90px" viewBox="0 0 200 90" aria-hidden="true"><path d="M40 80h120a30 30 0 0 0 0-60 45 45 0 0 0-84-6A33 33 0 0 0 40 80z"/></svg>
+  <svg class="cloud" style="width:120px;right:42%;top:60px;opacity:.7" viewBox="0 0 200 90" aria-hidden="true"><path d="M40 80h120a30 30 0 0 0 0-60 45 45 0 0 0-84-6A33 33 0 0 0 40 80z"/></svg>
+  <svg class="rain" style="position:absolute;inset:0;width:100%;height:100%" aria-hidden="true">
+    <line x1="8%" y1="30%" x2="7.5%" y2="34%"/><line x1="14%" y1="40%" x2="13.5%" y2="44%"/>
+    <line x1="22%" y1="25%" x2="21.5%" y2="29%"/><line x1="48%" y1="20%" x2="47.5%" y2="24%"/>
+    <line x1="55%" y1="35%" x2="54.5%" y2="39%"/><line x1="60%" y1="15%" x2="59.5%" y2="19%"/>
+    <line x1="35%" y1="70%" x2="34.5%" y2="74%"/><line x1="4%" y1="65%" x2="3.5%" y2="69%"/>
+  </svg>
+
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="hello script">Namaste, I'm</span>
+        <h1><span>Umesh</span><span class="outline">Chandra</span><span>Kulshrestha</span></h1>
+        <p class="tagline">I study what's in the air we breathe and what falls from the sky. <b>Professor &amp; Dean</b>, School of Environmental Sciences, JNU New Delhi.</p>
+        <div class="btns">
+          <a class="btn solid" href="#research">Explore my research</a>
+          <a class="btn light" href="https://scholar.google.com/citations?user=7d3R8UEAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        </div>
+      </div>
+      <div class="art">
+        <div class="sun"></div>
+        <div class="photo" id="photo">
+          <img src="https://www.jnu.ac.in/sites/default/files/styles/medium/public/styles/medium/public/umeshkulshrestha.jpg?itok=kDpZZgci"
+               alt="Prof. Umesh Chandra Kulshrestha"
+               onerror="this.closest('.photo').classList.add('noimg')">
+        </div>
+        <div class="sticker s3">Atmospheric chemist 🌧️</div>
+        <div class="sticker s1"><b>6,087</b>citations</div>
+        <div class="sticker s2"><b>30+ yrs</b>of air &amp; rain chemistry</div>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path fill="#fbfcff" d="M0 40c160 30 320 40 480 20S800 0 960 10s320 50 480 40v30H0z"/></svg>
+</div>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Aerosols</span><span>Rain &amp; snow chemistry</span><span>Atmospheric dust</span><span>Reactive nitrogen</span><span>Atmospheric mercury</span><span>Bioaerosols</span><span>Air pollution &amp; plants</span><span>Holistic environment</span>
+    <span>Aerosols</span><span>Rain &amp; snow chemistry</span><span>Atmospheric dust</span><span>Reactive nitrogen</span><span>Atmospheric mercury</span><span>Bioaerosols</span><span>Air pollution &amp; plants</span><span>Holistic environment</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="head"><span class="script">a little about me</span><h2>From the Taj Mahal's air to Himalayan snow</h2></div>
+    <div class="about-grid">
+      <div>
+        <p>My research career began at Dayalbagh Educational Institute, Agra, studying the chemistry and meteorology of air pollution around the Taj Mahal. Over three decades it has grown into an inter- and trans-disciplinary programme covering climate change, agricultural reactive nitrogen, plants and air pollution, atmospheric mercury and the long-range transport of pollutants across South Asia.</p>
+        <p>Before joining JNU as Professor in 2008, I spent ten years as a scientist at CSIR–Indian Institute of Chemical Technology, Hyderabad, after postdoctoral work at CSIR–National Physical Laboratory, New Delhi, and the Department of Meteorology at Stockholm University.</p>
+        <p>I edit <i>Current World Environment</i> as Editor-in-Chief, serve on the boards of <i>Aerosol and Air Quality Research</i> and the <i>Journal of the Indian Geophysical Union</i>, and was an Expert Reviewer for IPCC AR5 (Working Group I).</p>
+      </div>
+      <div class="quote-card">
+        <p>Our group's research has real socio-economic and geo-political weight for the Indian region, because clean air is never just a local question.</p>
+        <span class="script">— on why this work matters</span>
+      </div>
+    </div>
+
+    <div class="journey">
+      <h3>The journey so far</h3>
+      <div class="track" tabindex="0" aria-label="Career timeline, scroll sideways">
+        <div class="stop"><div class="y">1989</div><div class="t">MSc Chemistry</div><div class="w">Agra College, Agra University</div></div>
+        <div class="stop"><div class="y">1994</div><div class="t">PhD Chemistry</div><div class="w">Dayalbagh Educational Institute, on aerosol composition and deposition at Agra</div></div>
+        <div class="stop"><div class="y">1994–98</div><div class="t">Postdoc</div><div class="w">CSIR–NPL New Delhi and Stockholm University</div></div>
+        <div class="stop"><div class="y">1998–2008</div><div class="t">Scientist B to E-I</div><div class="w">CSIR–IICT, Hyderabad</div></div>
+        <div class="stop"><div class="y">2008</div><div class="t">Professor</div><div class="w">School of Environmental Sciences, JNU</div></div>
+        <div class="stop"><div class="y">Today</div><div class="t">Dean</div><div class="w">School of Environmental Sciences, JNU</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="research">
+  <div class="wrap">
+    <div class="head"><span class="script">what keeps me curious</span><h2>Research that looks up</h2><p>How emissions, dust, weather and deposition together shape the air over India, and what that means for people, plants and climate.</p></div>
+    <div class="pills">
+      <span class="pill">Aerosol chemistry</span><span class="pill">Rain &amp; snow chemistry</span><span class="pill">Atmospheric dust</span><span class="pill">Reactive nitrogen</span>
+      <span class="pill">Transport &amp; transformation</span><span class="pill">Atmospheric mercury</span><span class="pill">Bioaerosols</span><span class="pill">Metal aerosols</span>
+      <span class="pill">Carbonaceous aerosols</span><span class="pill">Biomonitoring</span><span class="pill">Analytical chemistry</span><span class="pill">Holistic environment</span>
+    </div>
+
+    <div class="bento">
+      <div class="tile b1">
+        <span class="first">First to report</span>
+        <svg viewBox="0 0 52 52" aria-hidden="true"><path d="M26 4C26 4 10 24 10 34a16 16 0 0 0 32 0C42 24 26 4 26 4z" fill="#22306f"/><path d="M19 34a7 7 0 0 0 7 7" stroke="#a9dbf7" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+        <h3>Acid rain over the Indian Ocean</h3>
+        <p>Winter rain over the Indian Ocean turned out to be commonly acidic, driven by low calcium and excess non-sea-salt sulphate. That's the reverse of what happens over the Indian mainland.</p>
+      </div>
+      <div class="tile b2">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="14" cy="18" r="5" fill="#22306f"/><circle cx="30" cy="12" r="4" fill="#22306f"/><circle cx="38" cy="28" r="6" fill="#22306f"/><circle cx="20" cy="36" r="4" fill="#22306f"/><circle cx="33" cy="42" r="3" fill="#22306f"/></svg>
+        <h3>Dust as a buffer</h3>
+        <p>Calcium carbonate in dust neutralises acidity over continental India.</p>
+      </div>
+      <div class="tile b3">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="18" cy="26" r="10" fill="none" stroke="#22306f" stroke-width="4"/><circle cx="34" cy="18" r="8" fill="none" stroke="#22306f" stroke-width="4"/><circle cx="34" cy="36" r="8" fill="none" stroke="#22306f" stroke-width="4"/></svg>
+        <h3>Chlorine and ozone</h3>
+        <p>Banning plastic burning cut chlorine emissions, and urban ozone spiked as less of it got destroyed. Followed up in 2025 with the role of HCl and Cl₂ in Delhi's ozone.</p>
+      </div>
+      <div class="tile b4">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><path d="M6 36c8-14 18-14 26 0s14 10 14-4" stroke="#22306f" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M6 20c8-10 18-10 26 0" stroke="#22306f" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+        <h3>How the Indo-Gangetic Plain breathes</h3>
+        <p>Valley topography and a "camel-ride push" of winter winds flush NCR pollution toward the Bay of Bengal in about 8 to 10 days. I've also proposed artificial lakes as a way to tame Delhi's dust.</p>
+      </div>
+      <div class="tile b5">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><path d="M26 46V24" stroke="#22306f" stroke-width="4" stroke-linecap="round"/><path d="M26 26C26 14 36 8 46 8c0 12-8 18-20 18zM26 32C26 22 16 16 6 16c0 10 8 16 20 16z" fill="#22306f"/></svg>
+        <h3>Urban dust and plants</h3>
+        <p>City dust measurably changes the biochemistry of plant leaves.</p>
+      </div>
+      <div class="tile b6">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><text x="6" y="36" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="28" fill="#22306f">Nr</text></svg>
+        <h3>Reactive nitrogen and land use</h3>
+        <p>Links poor air quality to aerosol and nitrogen emissions from land-use change and long-range transport.</p>
+      </div>
+    </div>
+
+    <div class="tools">
+      <span class="script">built in the lab:</span>
+      <span class="tool">Semi-automatic rain collector</span>
+      <span class="tool">Fine aerosol sampler</span>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications" class="pubs-sec">
+  <div class="wrap">
+    <div class="head"><span class="script">on paper</span><h2>Publications</h2><p>Most-cited work, the latest papers and books, from Google Scholar. The complete list lives on <a href="https://scholar.google.com/citations?user=7d3R8UEAAAAJ&amp;hl=en" target="_blank" rel="noopener"><b>his Scholar profile</b></a>.</p></div>
+
+    <div class="impact">
+      <div class="counts">
+        <div class="count"><b>6,087</b><span>citations</span></div>
+        <div class="count"><b>38</b><span>h-index</span></div>
+        <div class="count"><b>99</b><span>i10-index</span></div>
+        <div class="count alt"><b>2,164</b><span>citations since 2021</span></div>
+      </div>
+      <div class="chart-card">
+        <h3>Citations per year</h3>
+        <div class="bars" id="bars" role="img" aria-label="Citations per year from 1998 to 2026, peaking at 455 in 2020 and 2022"></div>
+        <div class="bar-axis"><span>1998</span><span>2012</span><span>2026*</span></div>
+      </div>
+    </div>
+    <p class="small">Google Scholar, as of 13 October 2026. *2026 is a partial year.</p>
+
+    <div class="tabs" role="tablist" style="margin-top:36px">
+      <button class="tab" role="tab" aria-selected="true" data-tab="cited">Most cited</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="latest">Latest</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="books">Books</button>
+    </div>
+
+    <ul class="plist" data-panel="cited">
+      <li class="p"><div class="y">2006</div><div><div class="ti">Nitrogen and sulfur deposition on regional and global scales: a multimodel evaluation</div><div class="au">F. Dentener, J. Drevet, J.F. Lamarque et al., incl. <b>U.C. Kulshrestha</b></div><div class="ve">Global Biogeochemical Cycles 20(4)</div></div><div class="cites">1,271<small>cites</small></div></li>
+      <li class="p"><div class="y">2003</div><div><div class="ti">Chemical characteristics of rainwater at an urban site of south-central India</div><div class="au"><b>U.C. Kulshrestha</b>, M.J. Kulshrestha, R. Sekar, G.S.R. Sastry, M. Vairamani</div><div class="ve">Atmospheric Environment 37(21), 3019–3026</div></div><div class="cites">343<small>cites</small></div></li>
+      <li class="p"><div class="y">2004</div><div><div class="ti">Emissions and accumulation of metals in the atmosphere due to crackers and sparkles during Diwali festival in India</div><div class="au"><b>U.C. Kulshrestha</b>, T.N. Rao, S. Azhaguvel, M.J. Kulshrestha</div><div class="ve">Atmospheric Environment 38(27), 4421–4425</div></div><div class="cites">302<small>cites</small></div></li>
+      <li class="p"><div class="y">1996</div><div><div class="ti">Investigation into atmospheric deposition through precipitation studies at New Delhi (India)</div><div class="au"><b>U.C. Kulshrestha</b>, A.K. Sarkar, S.S. Srivastava, D.C. Parashar</div><div class="ve">Atmospheric Environment 30(24), 4149–4154</div></div><div class="cites">212<small>cites</small></div></li>
+      <li class="p"><div class="y">1996</div><div><div class="ti">Characterization of precipitation at Agra</div><div class="au">A. Saxena, <b>U.C. Kulshrestha</b>, N. Kumar, K.M. Kumari, S.S. Srivastava</div><div class="ve">Atmospheric Environment 30(20), 3405–3412</div></div><div class="cites">139<small>cites</small></div></li>
+      <li class="p"><div class="y">2005</div><div><div class="ti">Review of precipitation monitoring studies in India: a search for regional patterns</div><div class="au"><b>U.C. Kulshrestha</b>, L. Granat, M. Engardt, H. Rodhe</div><div class="ve">Atmospheric Environment 39(38), 7403–7419</div></div><div class="cites">127<small>cites</small></div></li>
+      <li class="p"><div class="y">1998</div><div><div class="ti">Chemical composition and association of size-differentiated aerosols at a suburban site in a semi-arid tract of India</div><div class="au"><b>U.C. Kulshrestha</b>, A. Saxena, N. Kumar, K.M. Kumari, S.S. Srivastava</div><div class="ve">Journal of Atmospheric Chemistry 29(2), 109–118</div></div><div class="cites">127<small>cites</small></div></li>
+      <li class="p"><div class="y">2000</div><div><div class="ti">Influence of crustal aerosols on wet deposition at urban and rural sites in India</div><div class="au">M. Jain, <b>U.C. Kulshrestha</b>, A.K. Sarkar, D.C. Parashar</div><div class="ve">Atmospheric Environment 34(29–30), 5129–5137</div></div><div class="cites">119<small>cites</small></div></li>
+      <li class="p"><div class="y">2016</div><div><div class="ti">Impact and pollution indices of urban dust on selected plant species for green belt development: mitigation of the air pollution in NCR Delhi, India</div><div class="au">G.P. Gupta, B. Kumar, <b>U.C. Kulshrestha</b></div><div class="ve">Arabian Journal of Geosciences 9(2), 136</div></div><div class="cites">115<small>cites</small></div></li>
+      <li class="p"><div class="y">2003</div><div><div class="ti">Emissions of SO₂ and NOₓ from biofuels in India</div><div class="au">R. Gadi, <b>U.C. Kulshrestha</b>, A.K. Sarkar, S.C. Garg, D.C. Parashar</div><div class="ve">Tellus B 55(3), 787–795</div></div><div class="cites">104<small>cites</small></div></li>
+    </ul>
+
+    <ul class="plist" data-panel="latest" hidden>
+      <li class="p"><div class="y">2026</div><div><div class="ti">Significance of transboundary air pollution in South Asia</div><div class="au"><b>U.C. Kulshrestha</b></div><div class="ve">Current World Environment 21(1)</div></div></li>
+      <li class="p"><div class="y">2025</div><div><div class="ti">Air pollution in NCR-Delhi: drivers and measures</div><div class="au"><b>U.C. Kulshrestha</b></div><div class="ve">Current World Environment 20(3), 967</div></div></li>
+      <li class="p"><div class="y">2025</div><div><div class="ti">Role of HCl and Cl₂ in the tropospheric ozone formation at Delhi, India</div><div class="au">S. Dhakad, <b>U.C. Kulshrestha</b></div><div class="ve">Aerosol and Air Quality Research 25(7), 40</div></div></li>
+      <li class="p"><div class="y">2025</div><div><div class="ti">PM₁₀ Hg aerosols and their variations due to emission sources and meteorological factors at three sites in Delhi city (India)</div><div class="au">A. Kumari, <b>U.C. Kulshrestha</b></div><div class="ve">Progress in Environmental Chemistry</div></div></li>
+      <li class="p"><div class="y">2025</div><div><div class="ti">Space remote sensing needs for monitoring chlorine and other air pollutants for improved decision making in human health and climate change policies</div><div class="au"><b>U.C. Kulshrestha</b></div><div class="ve">Current World Environment 20(1)</div></div></li>
+      <li class="p"><div class="y">2024</div><div><div class="ti">Mitigation of carbonaceous indoor aerosols through behavioural change soft approach in cooking at selected rural sites (India)</div><div class="au">K. Verma, <b>U.C. Kulshrestha</b></div><div class="ve">Aerosol and Air Quality Research 24(6), 240013</div></div></li>
+      <li class="p"><div class="y">2024</div><div><div class="ti">Estimation of non-marine fractions of ions in rainwater at three sites of different characteristics in Haryana State (India)</div><div class="au">Y. Singh, A. Katoch, S. Yadav, S. Dhakad, <b>U.C. Kulshrestha</b></div><div class="ve">Aerosol and Air Quality Research 24(6), 230252</div></div></li>
+      <li class="p"><div class="y">2024</div><div><div class="ti">Wet scavenging of trace metals and reactive nitrogen in Delhi, India</div><div class="au">A. Katoch, S. Yadav, Y. Singh, <b>U. Kulshrestha</b></div><div class="ve">International Journal of Environmental Science and Technology 21(3), 2897–2912</div></div></li>
+      <li class="p"><div class="y">2024</div><div><div class="ti">Deposition of anthropogenic secondary anions through indoor dust on <i>Ficus elastica</i> plants in Delhi, India</div><div class="au">A. Katoch, <b>U.C. Kulshrestha</b></div><div class="ve">Arabian Journal of Geosciences 17(4), 112</div></div></li>
+    </ul>
+
+    <ul class="plist" data-panel="books" hidden>
+      <li class="p"><div class="y">2026</div><div><div class="ti">Atmosphere–Biosphere Interactions of Reactive Nitrogen in South Asia: Air Pollution and Food Productivity Concerns</div><div class="au"><b>U.C. Kulshrestha</b>, M.M. Rahman, A. Bhatia</div><div class="ve">Springer Nature</div></div><div class="cites new">New</div></li>
+      <li class="p"><div class="y">2017</div><div><div class="ti">The Indian Nitrogen Assessment: Sources of Reactive Nitrogen, Environmental and Climate Effects, Management Options, and Policies</div><div class="au">Y.P. Abrol, T.K. Adhya, V.P. Aneja, N. Raghuram, H. Pathak, <b>U. Kulshrestha</b>, C. Sharma, B. Singh (Eds.)</div><div class="ve">Elsevier. ISBN 9780128118368</div></div><div class="cites">102<small>cites</small></div></li>
+      <li class="p"><div class="y">2017</div><div><div class="ti">Air Pollution and Climate Change in South Asia: Issues, Impact and Initiatives</div><div class="au"><b>U. Kulshrestha</b> (Ed.)</div><div class="ve">Athena Academic, London. ISBN 9781910390344</div></div></li>
+      <li class="p"><div class="y">2016</div><div><div class="ti">Plant Responses to Air Pollution</div><div class="au"><b>U. Kulshrestha</b>, P. Saxena (Eds.)</div><div class="ve">Springer. ISBN 978-981-10-1201-3</div></div></li>
+      <li class="p"><div class="y">2015</div><div><div class="ti">Sustainable Air Pollution Management</div><div class="au">R. Chandrappa, <b>U.C. Kulshrestha</b></div><div class="ve">Springer. ISBN 978-3-319-21595-2</div></div></li>
+      <li class="p"><div class="y">2011</div><div><div class="ti">Coping with Climate Change: Principles and Asian Context</div><div class="au">R. Chandrappa, S. Gupta, <b>U.C. Kulshrestha</b></div><div class="ve">Springer. ISBN 978-3-642-19674-4</div></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="head"><span class="script">teamwork across borders</span><h2>Projects &amp; programmes</h2></div>
+    <div class="proj-grid">
+      <div class="proj now">
+        <h3>Now &amp; recently</h3>
+        <ul>
+          <li>UKRI GCRF South Asian Nitrogen Hub</li>
+          <li>International Nitrogen Management System</li>
+          <li>UGC UPE-II project on atmospheric mercury</li>
+          <li>UGC project on air pollution and plant stress (<a href="http://www.jnu.ac.in/Faculty/umesh/UGC%20Project%20Report_UmeshKUlshrestha.pdf" target="_blank" rel="noopener">final report</a>)</li>
+          <li>AIT–UNEP project on rural aerosols and climate change</li>
+          <li>DRSNet-India, a deposition network run by students</li>
+        </ul>
+      </div>
+      <div class="proj then">
+        <h3>Earlier collaborations</h3>
+        <ul>
+          <li>Atmospheric Brown Cloud with IMI, Stockholm University</li>
+          <li>Indo-Swedish aerosol and precipitation chemistry (RAPIDC, SIDA)</li>
+          <li>Composition of Asian Deposition, DEBITS–IGBP</li>
+          <li>Indian Ocean Experiment (INDOEX)</li>
+          <li>ISRO-GBP: ICARB campaign, Land Campaign II, Hyderabad aerosol sources</li>
+          <li>EANET international QA/QC inter-comparison, Japan</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HONOURS -->
+<section id="honours" class="honours">
+  <div class="wrap">
+    <div class="head"><span class="script">kind recognition</span><h2>Awards &amp; honours</h2></div>
+    <div class="medals">
+      <div class="medal"><div class="disc">2000</div><div class="t">International START Young Scientist Award</div><div class="d">IGBP-START, Washington DC</div></div>
+      <div class="medal"><div class="disc">2002</div><div class="t">Thomas Kuhn Honour Pin</div><div class="d">IUAPPA and International Academy of Sciences</div></div>
+      <div class="medal"><div class="disc">2004</div><div class="t">CSIR Young Scientist Award</div><div class="d">Earth and Atmospheric Sciences</div></div>
+      <div class="medal"><div class="disc">2004</div><div class="t">M. S. Krishnan Gold Medal</div><div class="d">Indian Geophysical Union</div></div>
+      <div class="medal"><div class="disc">2005</div><div class="t">IICT Gaurav Samman</div><div class="d">Indian Institute of Chemical Technology</div></div>
+    </div>
+
+    <div class="roles">
+      <div class="role-card">
+        <h3>Editorial &amp; expert roles</h3>
+        <ul>
+          <li>Editor-in-Chief, <i>Current World Environment</i></li>
+          <li>Editorial boards of <i>Aerosol and Air Quality Research</i> and <i>J. Indian Geophysical Union</i></li>
+          <li>Expert Reviewer, IPCC AR5 (WG1)</li>
+          <li>Fellow, Indian Geophysical Union; Associate Fellow, AP Academy of Sciences</li>
+          <li>Deputy Director, South Asian Nitrogen Centre</li>
+          <li>Former member, Environmental Pollution Control Authority (EPCA)</li>
+          <li>Expert member, Ministry of Environment, Forest and Climate Change</li>
+        </ul>
+      </div>
+      <div class="role-card">
+        <h3>Academic leadership</h3>
+        <ul>
+          <li>Dean, School of Environmental Sciences, JNU</li>
+          <li>Member, JNU Academic Council and Court</li>
+          <li>Former Director, Trans-disciplinary Research Cluster</li>
+          <li>Coordinator, JNU ENVIS Resource Partner (MoEFCC)</li>
+          <li>Academic Committees of the Indian Military Academy and Indian Naval Academy</li>
+          <li>NAAC Assessor; LEAP-trained faculty, Ministry of Education</li>
+          <li>Vice President, Society for Conservation of Nature</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GROUP -->
+<section id="group">
+  <div class="wrap">
+    <div class="head"><span class="script">the people behind the data</span><h2>Our research group</h2><p>The Atmospheric Chemistry and Climate Change Lab at SES, JNU. Doctoral graduates so far:</p></div>
+    <div class="group-grid">
+      <div>
+        <div class="tags">
+          <span class="tag">Dr Sudha Singh</span><span class="tag">Dr Gyan Prakash Gupta</span><span class="tag">Dr Saumya Singh</span>
+          <span class="tag">Dr Prasenjit Acharya</span><span class="tag">Dr Bablu Kumar</span><span class="tag">Dr Disha Sharma</span>
+          <span class="tag">Dr Anita Kumari</span><span class="tag">Dr Saurab Sonwani</span><span class="tag">Dr Shabana Manzoor</span>
+          <span class="tag">Dr Manisha Mishra</span>
+        </div>
+        <div class="network">
+          <h3>DRSNet-India</h3>
+          <p>A deposition research network run by PhD students: snow chemistry in the Himalayas of Kashmir, Himachal and Uttarakhand, rain and dustfall sites across north India, atmospheric mercury in Delhi, and reactive nitrogen in seven states.</p>
+        </div>
+      </div>
+      <div class="teach">
+        <h3>Courses I teach</h3>
+        <div class="course">Air Pollution<span>PhD</span></div>
+        <div class="course">Environmental Chemistry<span>MSc</span></div>
+        <div class="course">Metrology<span>MSc</span></div>
+        <div class="course">Intro to Environmental Science<span>BA</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTREACH -->
+<section id="outreach" class="outreach">
+  <div class="wrap">
+    <div class="head"><span class="script">beyond the lab</span><h2>Outreach &amp; science in Hindi</h2></div>
+    <div class="collage">
+      <div class="note"><h3>Holistic Environment</h3><p>A programme for integrated solutions to environmental problems, with around 30 Young Holistic (YoHo) activities that build students' skills and entrepreneurship.</p></div>
+      <div class="note"><h3>Diyewali Diwali</h3><p>"Pollution ka Solution" (2017): students went across Delhi asking people to swap crackers for diyas.</p></div>
+      <div class="note"><h3>Jan-Jan JNU</h3><p>Convener of JNU's first two Open Days in 2016 and 2017, bringing Delhi's school students onto campus.</p></div>
+      <div class="note"><h3>Science in Hindi</h3><p>Columnist for <i>Swadeshi Vigyan</i>, writing on air pollution, black carbon and Diwali smoke, plus Hindi poems and stories.</p></div>
+      <div class="note"><h3>JNU ENVIS</h3><p>Webinars, competitions and newsletters on COVID-19, NCR air pollution and Swachh Bharat reaching thousands of participants.</p></div>
+      <div class="note"><h3>Clean-energy mentoring</h3><p>Nudged MCEME Secunderabad into building a solar-wind power system and a solar campus trolley, both now in daily use.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <h2>Let's talk<br><span class="outline">clean air.</span></h2>
+        <a class="mail" href="mailto:umesh@mail.jnu.ac.in">umesh@mail.jnu.ac.in</a>
+      </div>
+      <div class="cinfo">
+        <div><small>Office</small>Room 308, School of Environmental Sciences, Jawaharlal Nehru University, New Delhi 110 067</div>
+        <div><small>Phone</small><a href="tel:+911126704320">+91 11 2670 4320</a></div>
+        <div><small>Also on</small><a href="mailto:umeshkulshrestha@gmail.com">umeshkulshrestha@gmail.com</a><br><a href="https://scholar.google.com/citations?user=7d3R8UEAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> and <a href="https://www.jnu.ac.in/content/umesh" target="_blank" rel="noopener">JNU profile</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Prof. Umesh Chandra Kulshrestha, JNU New Delhi</span>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script type="application/json" id="site-data">{"years":[1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026],"cites":[26,16,25,68,50,46,45,89,70,111,113,140,172,162,211,185,278,230,333,307,325,322,455,446,455,327,392,299,238]}</script>
+<script>
+window.drawCitationChart = () => {
+  const d = JSON.parse(document.getElementById('site-data').textContent);
+  const bars = document.getElementById('bars'), mx = Math.max(...d.cites, 1);
+  bars.innerHTML = '';
+  d.cites.forEach((c, i) => { const e = document.createElement('i'); e.style.height = (c / mx * 100) + '%'; e.dataset.t = d.years[i] + ': ' + c; e.title = d.years[i] + ': ' + c; bars.appendChild(e); });
+  const ax = document.querySelector('.bar-axis');
+  if (ax && d.years.length) ax.innerHTML = '<span>' + d.years[0] + '</span><span>' + d.years[Math.floor(d.years.length / 2)] + '</span><span>' + d.years[d.years.length - 1] + '</span>';
+};
+drawCitationChart();
+document.getElementById('yr').textContent = new Date().getFullYear();
+const links = document.getElementById('links'), burger = document.getElementById('burger');
+burger.addEventListener('click', () => {
+  const open = links.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+});
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { links.classList.remove('open'); burger.setAttribute('aria-expanded', false); }));
+document.querySelectorAll('.tab').forEach(tab => tab.addEventListener('click', () => {
+  document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', t === tab));
+  document.querySelectorAll('[data-panel]').forEach(p => p.hidden = p.dataset.panel !== tab.dataset.tab);
+}));
+</script>
+<!-- ===================== SITE EDITOR =====================
+Open the live site with #edit at the end of the address (or press Ctrl+Shift+E)
+to edit text, lists, photo, links and the citation chart right on the page.
+Nothing here is visible to normal visitors, and no password or token is stored in this file.
+======================================================== -->
+<style id="editor-css">
+body.editing [contenteditable="true"]{outline:1.5px dashed rgba(47,63,143,.35);outline-offset:3px;border-radius:4px;cursor:text}
+body.editing [contenteditable="true"]:hover{outline-color:rgba(47,63,143,.75)}
+body.editing [contenteditable="true"]:focus{outline:2px solid #2f3f8f;background:rgba(255,255,255,.35)}
+body.editing a{cursor:text}
+body.editing .photo{cursor:pointer}
+body.editing .photo::before{content:"Change photo";position:absolute;inset:auto 0 12px 0;margin:auto;width:max-content;background:#141a33;color:#fff;font:600 .8rem Figtree,sans-serif;padding:6px 12px;border-radius:999px;z-index:3}
+body.editing{padding-bottom:84px}
+.photo.noimg img{display:none}
+.photo.noimg::after{content:"UK"}
+.ed-bar{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:999;background:#141a33;color:#fff;border-radius:999px;padding:8px;display:flex;gap:6px;align-items:center;box-shadow:0 14px 40px rgba(0,0,0,.3);font:600 .88rem Figtree,system-ui,sans-serif;max-width:calc(100% - 24px);overflow-x:auto}
+.ed-bar .ed-dot{width:10px;height:10px;border-radius:50%;background:#bfe8d0;margin:0 6px 0 10px;flex:none}
+.ed-bar .ed-dot.dirty{background:#f7c548}
+.ed-bar .ed-status{white-space:nowrap;margin-right:6px;color:#d9f0fd}
+.ed-bar button,.ed-items button,.ed-modal button{font:600 .86rem Figtree,system-ui,sans-serif;border:0;border-radius:999px;padding:9px 14px;cursor:pointer;white-space:nowrap;background:rgba(255,255,255,.12);color:#fff}
+.ed-bar button.primary{background:#f7c548;color:#22306f}
+.ed-bar button:disabled{opacity:.4;cursor:default}
+.ed-items{position:absolute;z-index:998;display:none;gap:4px;background:#141a33;padding:4px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.ed-items button{padding:5px 9px;border-radius:8px;font-size:.8rem}
+.ed-items button:hover{background:#2f3f8f}
+.ed-hl{outline:2px solid #f7c548 !important;outline-offset:4px}
+.ed-modal{position:fixed;inset:0;z-index:1000;background:rgba(20,26,51,.55);display:grid;place-items:center;padding:16px}
+.ed-modal .box{background:#fff;color:#141a33;border-radius:24px;padding:26px;width:min(560px,100%);max-height:90vh;overflow:auto;font:15px/1.5 Figtree,system-ui,sans-serif}
+.ed-modal h3{font:800 1.4rem "Bricolage Grotesque",sans-serif;margin:0 0 6px;color:#22306f}
+.ed-modal p{margin:0 0 14px;color:#4a5275}
+.ed-modal label{display:block;font-weight:700;margin:12px 0 4px}
+.ed-modal input,.ed-modal textarea{width:100%;font:15px Figtree,system-ui,sans-serif;padding:10px 12px;border:2px solid #d9f0fd;border-radius:12px;color:#141a33}
+.ed-modal textarea{min-height:200px;font-family:ui-monospace,monospace;font-size:13px}
+.ed-modal .row{display:flex;gap:8px;justify-content:flex-end;margin-top:20px;flex-wrap:wrap}
+.ed-modal button{background:#d9f0fd;color:#22306f}
+.ed-modal button.primary{background:#22306f;color:#fff}
+.ed-modal ol{padding-left:20px;margin:0 0 6px;color:#4a5275}
+.ed-toast{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:1001;background:#22306f;color:#fff;padding:12px 20px;border-radius:999px;font:600 .9rem Figtree,system-ui,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.ed-toast.err{background:#b3261e}
+</style>
+<script id="editor-js">
+(() => {
+  const REPEAT = '.stop,.pill,.tile,.p,.proj li,.medal,.role-card li,.tag,.course,.note,.count,.tool,.cinfo > div,.btns > .btn';
+  const SKIP = 'script,style,svg,button,[data-editor-ui],.marquee,#bars,.bar-axis';
+  const KEY = 'siteEditor.settings';
+  let editing = false, dirty = false, bar, items, current = null, lastLink = null;
+  const pending = new Map(); // img element -> repo path of a newly uploaded photo
+
+  const settings = () => { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } };
+  const saveSettings = s => { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {} };
+  const ui = el => (el.setAttribute('data-editor-ui', ''), el);
+  const toast = (msg, err) => {
+    const t = ui(document.createElement('div')); t.className = 'ed-toast' + (err ? ' err' : ''); t.textContent = msg;
+    document.body.appendChild(t); setTimeout(() => t.remove(), err ? 6000 : 3000);
+  };
+  const markDirty = () => { dirty = true; bar && bar.querySelector('.ed-dot').classList.add('dirty'); setStatus('Unsaved changes'); };
+  const setStatus = s => bar && (bar.querySelector('.ed-status').textContent = s);
+
+  // ---------- make text editable ----------
+  function makeEditable(root) {
+    root.querySelectorAll('*').forEach(el => {
+      if (el.closest(SKIP) || el.parentElement?.closest('[contenteditable="true"]')) return;
+      const hasText = [...el.childNodes].some(n => n.nodeType === 3 && n.textContent.trim());
+      if (hasText) { el.setAttribute('contenteditable', 'true'); el.spellcheck = true; }
+    });
+  }
+  function stripEditable(root) { root.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable')); }
+
+  // ---------- enter / leave edit mode ----------
+  function start() {
+    if (editing) return; editing = true;
+    document.body.classList.add('editing');
+    makeEditable(document.body);
+    buildBar(); buildItems();
+    document.addEventListener('input', onInput, true);
+    document.addEventListener('click', onClick, true);
+    document.addEventListener('mouseover', onHover, true);
+    document.addEventListener('focusin', onHover, true);
+    document.addEventListener('paste', onPaste, true);
+    window.addEventListener('beforeunload', warn);
+    if (!settings().token) toast('Tip: open Settings once to connect your site repository');
+  }
+  function stop() {
+    if (dirty && !confirm('You have unsaved changes. Leave edit mode and discard them?')) return;
+    window.removeEventListener('beforeunload', warn);
+    location.hash = ''; location.reload();
+  }
+  const warn = e => { if (dirty) { e.preventDefault(); e.returnValue = ''; } };
+  function onInput(e) { if (e.target.closest('[contenteditable]')) markDirty(); }
+  function onPaste(e) {
+    if (!e.target.closest('[contenteditable]')) return;
+    e.preventDefault(); // paste as plain text so no stray styles end up in the site
+    document.execCommand('insertText', false, (e.clipboardData || window.clipboardData).getData('text/plain'));
+  }
+  function onClick(e) {
+    if (e.target.closest('[data-editor-ui]')) return;
+    const a = e.target.closest('a');
+    if (a) { e.preventDefault(); lastLink = a; bar.querySelector('[data-act=link]').disabled = false; }
+    const photo = e.target.closest('.photo');
+    if (photo) { e.preventDefault(); changePhoto(photo); }
+  }
+
+  // ---------- bottom toolbar ----------
+  function buildBar() {
+    bar = ui(document.createElement('div')); bar.className = 'ed-bar';
+    bar.innerHTML = '<span class="ed-dot"></span><span class="ed-status">Editing</span>' +
+      '<button data-act="link" disabled title="Click a link or button on the page first">Edit link</button>' +
+      '<button data-act="chart">Citation chart</button>' +
+      '<button data-act="settings">Settings</button>' +
+      '<button data-act="download">Download</button>' +
+      '<button data-act="save" class="primary">Save to site</button>' +
+      '<button data-act="exit">Exit</button>';
+    bar.addEventListener('click', e => {
+      const act = e.target.dataset.act; if (!act) return;
+      ({ link: editLink, chart: editChart, settings: openSettings, download, save: publish, exit: stop })[act]();
+    });
+    document.body.appendChild(bar);
+  }
+
+  // ---------- duplicate / move / delete repeating items ----------
+  function buildItems() {
+    items = ui(document.createElement('div')); items.className = 'ed-items';
+    items.innerHTML = '<button data-i="dup" title="Duplicate">+ Copy</button><button data-i="up" title="Move earlier">↑</button><button data-i="down" title="Move later">↓</button><button data-i="del" title="Delete">Delete</button>';
+    items.addEventListener('mousedown', e => e.preventDefault());
+    items.addEventListener('click', e => {
+      const act = e.target.dataset.i; if (!act || !current) return;
+      const el = current;
+      if (act === 'dup') { const c = el.cloneNode(true); el.after(c); stripEditable(c); makeEditable(c); place(c); }
+      if (act === 'up' && el.previousElementSibling) el.previousElementSibling.before(el);
+      if (act === 'down' && el.nextElementSibling) el.nextElementSibling.after(el);
+      if (act === 'del') {
+        if (el.parentElement.querySelectorAll(':scope > *').length <= 1) return toast('Keep at least one item so it can be copied later', true);
+        if (!confirm('Delete this item?')) return;
+        el.remove(); items.style.display = 'none'; current = null;
+      }
+      markDirty(); if (current) place(current);
+    });
+    document.body.appendChild(items);
+  }
+  function onHover(e) {
+    if (e.target.closest('[data-editor-ui]')) return;
+    const el = e.target.closest(REPEAT);
+    if (el && el !== current) place(el);
+  }
+  function place(el) {
+    current?.classList.remove('ed-hl'); current = el; el.classList.add('ed-hl');
+    const r = el.getBoundingClientRect();
+    items.style.display = 'flex';
+    items.style.top = (r.top + scrollY - 40) + 'px';
+    items.style.left = Math.max(8, Math.min(r.right + scrollX - items.offsetWidth, document.documentElement.clientWidth - items.offsetWidth - 8)) + 'px';
+  }
+
+  // ---------- links ----------
+  function editLink() {
+    if (!lastLink) return;
+    const href = prompt('Where should this link go? (web address, mailto:… or #section)', lastLink.getAttribute('href') || '');
+    if (href === null) return;
+    if (href.trim() === '') { if (confirm('Remove the link but keep its text?')) { lastLink.replaceWith(...lastLink.childNodes); markDirty(); } return; }
+    lastLink.setAttribute('href', href.trim()); markDirty(); toast('Link updated');
+  }
+
+  // ---------- photo ----------
+  function changePhoto(photo) {
+    const img = photo.querySelector('img');
+    modal('<h3>Change photo</h3><p>Paste an image address, or upload a photo from this device.</p>' +
+      '<label>Image address</label><input id="ed-url" placeholder="https://…">' +
+      '<label>Or upload</label><input id="ed-file" type="file" accept="image/*">',
+      async box => {
+        const url = box.querySelector('#ed-url').value.trim(), file = box.querySelector('#ed-file').files[0];
+        if (file) {
+          if (file.size > 2e6) return toast('Please use a photo under 2 MB', true), false;
+          const s = settings();
+          if (s.token) {
+            const path = 'assets/' + Date.now() + '-' + file.name.replace(/[^\w.-]+/g, '-').toLowerCase();
+            setStatus('Uploading photo…');
+            await gh('PUT', path, { message: 'Upload photo ' + file.name, content: await b64(new Uint8Array(await file.arrayBuffer())), branch: s.branch });
+            img.src = URL.createObjectURL(file); pending.set(img, path);
+          } else {
+            img.src = await new Promise(r => { const fr = new FileReader(); fr.onload = () => r(fr.result); fr.readAsDataURL(file); });
+          }
+        } else if (url) { img.src = url; pending.delete(img); }
+        else return false;
+        photo.classList.remove('noimg'); markDirty(); return true;
+      });
+  }
+
+  // ---------- citation chart data ----------
+  function editChart() {
+    const dataEl = document.getElementById('site-data'), d = JSON.parse(dataEl.textContent);
+    const text = d.years.map((y, i) => y + ', ' + d.cites[i]).join('\n');
+    modal('<h3>Citations per year</h3><p>One line per year: <b>year, citations</b>. Copy the numbers from the Google Scholar bar chart. The big counts and note above the chart are edited directly on the page.</p>' +
+      '<textarea id="ed-chart">' + text + '</textarea>', box => {
+        const rows = box.querySelector('#ed-chart').value.split('\n').map(l => l.split(/[,\s:]+/).filter(Boolean)).filter(r => r.length >= 2);
+        const years = rows.map(r => +r[0]), cites = rows.map(r => +r[1]);
+        if (!rows.length || years.some(isNaN) || cites.some(isNaN)) return toast('Each line needs a year and a number', true), false;
+        d.years = years; d.cites = cites; dataEl.textContent = JSON.stringify(d);
+        window.drawCitationChart && window.drawCitationChart();
+        markDirty(); return true;
+      });
+  }
+
+  // ---------- settings ----------
+  function openSettings() {
+    const s = settings();
+    modal('<h3>Connect your site</h3><p>Saving writes this page back to the GitHub repository your host (GitHub Pages, Netlify, Cloudflare Pages or Vercel) publishes from. These details stay in this browser only.</p>' +
+      '<ol><li>On GitHub, open Settings → Developer settings → Fine-grained tokens → Generate new token.</li><li>Under Repository access pick only this site\'s repository.</li><li>Under Permissions set <b>Contents</b> to <b>Read and write</b>, then generate and paste it below.</li></ol>' +
+      '<label>Repository (owner/name)</label><input id="ed-repo" placeholder="saurabhdjnu/umesh-kulshrestha" value="' + (s.repo || '') + '">' +
+      '<label>Branch</label><input id="ed-branch" value="' + (s.branch || 'main') + '">' +
+      '<label>Page file in the repository</label><input id="ed-path" value="' + (s.path || 'index.html') + '">' +
+      '<label>Access token</label><input id="ed-token" type="password" placeholder="github_pat_…" value="' + (s.token || '') + '">',
+      box => {
+        const v = id => box.querySelector(id).value.trim();
+        if (!/^[\w.-]+\/[\w.-]+$/.test(v('#ed-repo'))) return toast('Repository should look like owner/name', true), false;
+        saveSettings({ repo: v('#ed-repo'), branch: v('#ed-branch') || 'main', path: v('#ed-path') || 'index.html', token: v('#ed-token') });
+        toast('Saved in this browser'); return true;
+      }, 'Save settings',
+      '<button data-x="forget">Forget on this device</button>', box => box.querySelector('[data-x=forget]').onclick = () => { localStorage.removeItem(KEY); toast('Removed'); box.closest('.ed-modal').remove(); });
+  }
+
+  // ---------- produce the clean page ----------
+  function cleanHTML() {
+    const root = document.documentElement.cloneNode(true);
+    root.querySelectorAll('[data-editor-ui]').forEach(el => el.remove());
+    stripEditable(root);
+    root.querySelector('body').classList.remove('editing');
+    if (!root.querySelector('body').className) root.querySelector('body').removeAttribute('class');
+    root.querySelectorAll('.ed-hl').forEach(el => el.classList.remove('ed-hl'));
+    root.querySelectorAll('.photo.noimg').forEach(el => el.classList.remove('noimg'));
+    root.querySelectorAll('.nav-links.open').forEach(el => el.classList.remove('open'));
+    const bars = root.querySelector('#bars'); if (bars) bars.innerHTML = '';
+    // put publication tabs back to the first one
+    root.querySelectorAll('.tab').forEach((t, i) => t.setAttribute('aria-selected', i === 0));
+    root.querySelectorAll('[data-panel]').forEach((p, i) => i === 0 ? p.removeAttribute('hidden') : p.setAttribute('hidden', ''));
+    // swap preview photos for their uploaded repository paths
+    const live = [...document.querySelectorAll('img')], copy = [...root.querySelectorAll('img')];
+    live.forEach((img, i) => { if (pending.has(img) && copy[i]) copy[i].setAttribute('src', pending.get(img)); });
+    root.querySelectorAll('[class=""]').forEach(el => el.removeAttribute('class'));
+    return '<!doctype html>\n' + root.outerHTML;
+  }
+
+  function download() {
+    const blob = new Blob([cleanHTML()], { type: 'text/html' });
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'index.html'; a.click();
+    toast('Downloaded index.html. Upload it to your host to publish');
+  }
+
+  // ---------- GitHub ----------
+  async function b64(bytes) {
+    let s = ''; for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+    return btoa(s);
+  }
+  async function gh(method, path, body) {
+    const s = settings();
+    const url = 'https://api.github.com/repos/' + s.repo + '/contents/' + path.split('/').map(encodeURIComponent).join('/') + (method === 'GET' ? '?ref=' + encodeURIComponent(s.branch) : '');
+    const res = await fetch(url, { method, headers: { Authorization: 'Bearer ' + s.token, Accept: 'application/vnd.github+json' }, body: body && JSON.stringify(body) });
+    if (!res.ok) {
+      const msg = res.status === 401 ? 'The access token was rejected. Check it in Settings'
+        : res.status === 403 ? 'The token can\'t write to this repository. Give it Contents: Read and write'
+        : res.status === 404 ? 'Repository, branch or file not found. Check Settings'
+        : res.status === 409 ? 'The site changed while you were editing. Reload and try again'
+        : 'GitHub said ' + res.status;
+      throw new Error(msg);
+    }
+    return res.json();
+  }
+  async function publish() {
+    const s = settings();
+    if (!s.token || !s.repo) { openSettings(); return toast('Connect your repository first, or use Download', true); }
+    const btn = bar.querySelector('[data-act=save]'); btn.disabled = true; setStatus('Saving…');
+    try {
+      let sha; try { sha = (await gh('GET', s.path)).sha; } catch (e) { if (!/not found/.test(e.message)) throw e; }
+      await gh('PUT', s.path, { message: 'Update site from the page editor', content: await b64(new TextEncoder().encode(cleanHTML())), sha, branch: s.branch });
+      dirty = false; bar.querySelector('.ed-dot').classList.remove('dirty');
+      setStatus('Saved. Live in a minute or two'); toast('Saved. Your host will republish shortly');
+    } catch (e) { setStatus('Not saved'); toast(e.message, true); }
+    btn.disabled = false;
+  }
+
+  // ---------- small modal helper ----------
+  function modal(html, onOk, okLabel = 'Done', extra = '', onOpen) {
+    const m = ui(document.createElement('div')); m.className = 'ed-modal';
+    m.innerHTML = '<div class="box">' + html + '<div class="row">' + extra + '<button data-x="cancel">Cancel</button><button data-x="ok" class="primary">' + okLabel + '</button></div></div>';
+    const box = m.querySelector('.box');
+    m.addEventListener('click', async e => {
+      if (e.target === m || e.target.dataset.x === 'cancel') m.remove();
+      if (e.target.dataset.x === 'ok') {
+        try { if ((await onOk(box)) !== false) m.remove(); } catch (err) { toast(err.message, true); }
+      }
+    });
+    document.body.appendChild(m); onOpen && onOpen(box);
+    box.querySelector('input,textarea')?.focus();
+  }
+
+  // ---------- triggers ----------
+  if (location.hash === '#edit') start();
+  addEventListener('hashchange', () => location.hash === '#edit' && start());
+  addEventListener('keydown', e => { if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'e') { e.preventDefault(); start(); } });
+})();
+</script>
+</body>
+</html>
